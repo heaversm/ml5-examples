@@ -55,8 +55,8 @@ function predict() {
 // A util function to create UI buttons
 function setupButtons() {
   slider = select('#slider');
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
+  // When the add sample button is pressed, add the current frame
+  // from the video with the value from the slider
   select('#addSample').mousePressed(function() {
     regressor.addImage(slider.value());
     select('#amountOfSamples').html(samples++);
